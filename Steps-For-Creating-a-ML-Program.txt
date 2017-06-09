@@ -1,0 +1,46 @@
+For making any ML based program we need to keep following few things in mind: 
+(i) We would need to import required packages as and when necessary
+
+(ii) We would have to find a particular dataset on which we are to prepare a ML model and then load them into your program or you can use some
+of the famous or very popularly used datasets which can be used by directly importing some packages.
+
+Like in my program I have used Iris dataset which is available as a package.
+
+(iii) Then we need to perform data cleaning if required and since this is our first basic program we are not going into much details and procedures
+to do so. But you must explore it as we would be required almost every time in future in our program.
+
+(iv) After this we need to explore which algorithm we are interested in using for our task. Since we are making a model using Logistic Regression 
+we need to explore sklearn/scikit-learn package in python for ML functions. It would contain almost any required ML algorithm. It is basic scientific 
+kit/library of ML.
+
+(v) After we have identified our required function we also need to see its usage and various parameters which are supplied to that function to improve 
+its accuracy.
+
+(vi) Also note if you need to pictorially represent your datasets you can always use matplotlib library. It can be very useful to represent our data using 
+graphs or plots. We are not using it here but remember it should be used to present or explain your point to some else.
+
+Sometimes feature engineering is also performed after this if we have many variables or parameters in our dataset and we need to keep only essential 
+features in order to improve its accuracy.
+
+(vii) After this comes the most essential step. Splitting our dataset into two partitions. One for training purpose and another for testing purpose.
+
+This can be done using inbuilt train_test_split function available to us. If we are working in some other programming language and you do not have
+this train_test_split function then we divide the dataset ourselves into 60:40 ratio where 60% is used for training and 40% is used for testing 
+(A rule that is followed generally).
+
+(viii) Then feed our chosen algorithm, in this case Logistic Regression function with train data to learn patterns and identity which type of data 
+points belong to which classes.
+
+This can also be done easily by using fit function which basically fits the train dataset into the algorithm.
+
+(ix) After we are done with this, we have basically trained our model. Remember the larger the train dataset the better it would be able 
+to distinguish between various classes. Also tuning of parameters used in our function also plays a vital role.
+
+(x) Now we are ready to test our model. We can use our trained model to predict the outcome of test datasets.
+
+And to check how well it performed we can compare our results with actual classes of these test datasets.
+
+(xi) Lastly, you can find accuracy of the model using various functions of "metrics" sub package available in python.
+
+You don't need to panic. I also don't remember all these functions and their usage. But you can always Google about them. A very good documentation 
+of these functions is available online.
