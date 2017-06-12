@@ -1,4 +1,5 @@
-For making any ML based program we need to keep following few things in mind: 
+			For making any ML based program we need to keep following few things in mind: 
+			
 (i) We would need to import required packages as and when necessary
 
 (ii) We would have to find a particular dataset on which we are to prepare a ML model and then load them into your program or you can use some of the famous or very popularly used datasets which can be used by directly importing some packages.
