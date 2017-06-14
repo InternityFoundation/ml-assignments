@@ -33,4 +33,4 @@ Now we are ready to test our model. We can use our trained model to predict the 
 ### (ix) Finding accuracy
 Lastly, we can find accuracy of the model using various functions of "metrics" sub package available in python. We can also use other techniques such can confusion matrix, Receiver Operating Curve (ROC), Precision Recall Curve, etc. to see how well our model has performed.
 
-Note: This steps can be performed in any order in our program as per our convenience and a few other things can always be added or removed as per our requirements and necessity.
+#### Note: <p>These steps can be performed in any order in our program as per our convenience and a few other things can always be added or removed as per our requirements and necessity.</p>
