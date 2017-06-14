@@ -1,18 +1,16 @@
-			For making any ML based program we need to keep following few things in mind: 
+					STEPS FOR CREATING A MACHINE LEARNING PROGRAM
 			
-(i) We would need to import required packages as and when necessary
+(i) Importing Required Packages: We would need to import packages as and when required in our program as per the requirements. These packages are similar to header files in programming languages such as C/C++. They contain a bunch of functions developed by various developers to perform certain tasks and can be used easily. We need not write their logic from scratch and they are very well optimised to save our time and memory space both. If you face any type of import errors then make sure that the package which you are trying to use is already installed.
 
-(ii) We would have to find a particular dataset on which we are to prepare a ML model and then load them into your program or you can use some of the famous or very popularly used datasets which can be used by directly importing some packages.
+(ii) Loading Data: We would have to find a particular dataset on which we are interested to prepare a ML model and then load them into our program or we can use some of the famous or very popularly used datasets (like Iris dataset) which can be used by directly importing some packages. For importing data  from CSV (Comma Seperated Values) file or text files we can use either NumPy or Pandas. I recommend using pandas dataframes as they provide lot of flexibilities such as inluding headers or not and various other which you can explore.
 
-Like in my program I have used Iris dataset which is available as a package.
+(iii) Data Cleaning: We need to perform data cleaning if required. It involves removing tupples or records which are redundant or repeated or if have missing values. Another way to deal with missing values is to fill them by using various measures of central tendencies such as mean/median depending on the situation. Generally if a record has multiple fields missing we prefer to remove that record and if it has less number of fields or features missing we can use mean/median to fill those missing values.
 
-(iii) Then we need to perform data cleaning if required and since this is our first basic program we are not going into much details and procedures to do so. But you must explore it as we would be required almost every time in future in our program.
+(iv) Finding Appropriate Algorithm: After performing data cleaning we need to explore an appropriate algorithm for solcing our problem. We can explore sklearn/scikit-learn package in python for ML functions. It would contain almost any required ML algorithm. It is basic scientific kit/library of ML.
 
-(iv) After this we need to explore which algorithm we are interested in using for our task. Since we are making a model using Logistic Regression we need to explore sklearn/scikit-learn package in python for ML functions. It would contain almost any required ML algorithm. It is basic scientific kit/library of ML.
+After we have identified our required function we also need to see its usage and various parameters which are supplied to that function to improve its accuracy.
 
-(v) After we have identified our required function we also need to see its usage and various parameters which are supplied to that function to improve its accuracy.
-
-(vi) Also note if you need to pictorially represent your datasets you can always use matplotlib library. It can be very useful to represent our data using graphs or plots. We are not using it here but remember it should be used to present or explain your point to some else.
+(v) Data Representation: Also note if you need to pictorially represent your datasets you can always use matplotlib library. It can be very useful to represent our data using graphs or plots. We are not using it here but remember it should be used to present or explain your point to some else.
 
 Sometimes feature engineering is also performed after this if we have many variables or parameters in our dataset and we need to keep only essential features in order to improve its accuracy.
 
