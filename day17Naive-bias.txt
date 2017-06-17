@@ -1,0 +1,73 @@
+Introduction to Naive-Bayes algo:
+
+1.Bayesian reasoning is applied to decision making and inferential statistics that deals with probability inference. 2.It uses the knowledge of prior events    to predict future events.
+Example: 1.Predicting the colour of marbles in a basket.
+3. On the basis of following data, predicting whether a customer will buy a computer or not?
+4.It is a probablistic approach but more certain than the  probablistic outcome.
+5.We study the previously stored data to predict a event's probablity to attain best outcome.
+
+The Bayes Theorem:
+P(h UPON D)= P(D UPON h) P(h)
+
+Example table is the example taken here.Kindly refer it for the same.
+
+where,
+P(h) : Prior probability of hypothesis h
+P(D) : Prior probability of training data D P(h UPON D) : Probability of h given D
+P(D UPON h) : Probability of D given h
+
+
+Theory applied on previous example:
+ D : 35 year old customer with an income of 50,000 p.a.
+ h : Hypothesis that our customer will buy our computer
+
+P(h UPON D) : Probability that customer D will buy our computer given that we know his age and income
+P(h) : Probability that any customer will buy our computer regardless of age (Prior Probability)P(D UPON h) : Probability that the customer is 35 yrs old and earns 50,000, given that he has bought our computer (Posterior Probability)
+P(D) : Probability that a person from our set of customers  is 35 yrs old and earns 50,000
+Rules of probability:
+From   P(S UPON M) = P(S), the rules of probability imply:
+ P(notS UPON M) = P(notS)
+ P(M UPON S) = P(M)
+ P(M AND S) = P(M) P(S)
+ P(notM AND S) = P(notM) P(S)
+ P(M AND not S) = P(M)P(notS)
+ P(not M AND notS) = P(notM)P(notS)
+Theory applied on previous example:
+The sunshine levels do not depend on and do not influence who is teaching.aeù can be specified very simply:
+P(S UPON M) = P(S)
+Two  events  A  and  B   are  statistically  independent if  the  probability  of  A  is  the  same  value when B occurs, when B does not occur or when nothing is known about the occurrence of Baeù
+Conditional Probability : example:          
+H = Have a headacheaeù
+F = Coming down with Fluae.
+P(H) = 1 UPON 10
+P(F) = 1UPON 40                                                    
+P(H UPON F) = 1 UPON 2
+
+P( A upon B)+P(A AND notA upon B) = 1
+ae Headaches are rare and flu is rarer, but if you are coming down with aeflu there aes a 50-50 chance youaell have a headache.aeù
+P(H UPON F) = Fraction of flu-inflicted worlds in which you have a headache  =
+worlds with flu and headache Area of AEOH and FAHù region              P(H AND F)
+
+P(A upon B) = Fraction of worlds in which B is true that also have A true
+P(A AND B)
+P(A UPON B)  =  
+P(B)
+Corollary:
+P(A AND B) = P(A UPON B) P(B)
+P(A UPON B)+P( A AND  notA UPON B) = 1                                               
+ 
+worlds with flu Area ofùregion P(F)
+
+Note: We can use other methods like pi-chart, Venn diagram, Set-theory and functions to represent the relationship between two or more entities for applying better regression.
+
+Approach:
+Step 1: Collect data of customer preferences (data from previous billing history of the customer).
+
+Step 2: Study collected data carefully and declare the customer preferences on the basis of: brands, discounts, income, age, credit-rating, age-group of customer and goods or products that they purchase.
+
+Advantage:
+1. It minimizes the risk level to a great extent.
+2. It will help in extending business and increasing the profit of an individual or company.
+3. It helps the sellers or any type of service provider to offer the best suitable offers the right customers who are looking for it.
+
+
