@@ -1,0 +1,154 @@
+What is Clustering?
+Clustering can be considered the most important unsupervised learning problem; so, as every other problem of this kind, it deals with finding a structure in a collection of unlabeled data.
+A loose definition of clustering could be “the process of organizing objects into groups whose members are similar in some way”.
+A cluster is therefore a collection of objects which are “similar” between them and are “dissimilar” to the objects belonging to other clusters.
+We can show this with a simple graphical example:
+
+
+
+In this case we easily identify the 4 clusters into which the data can be divided; the similarity criterion is distance: two or more objects belong to the same cluster if they are “close” according to a given distance (in this case geometrical distance). This is called distance-based clustering.
+Another kind of clustering is conceptual clustering: two or more objects belong to the same cluster if this one defines a concept common to all that objects. In other words, objects are grouped according to their fit to descriptive concepts, not according to simple similarity measures.
+
+Clustering:analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group(called cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). It is a main task of exploratory data mining, and a common technique
+for statistical data analysis used in many fields, includingmachine learning, pattern recognition, image analysis,information retrieval, and bioinformatics.
+
+A. Types of Clustering
+Cluster: It is said to be “Collection of data objects”.
+Where the two types of similarities of clustering’s are:
+• Intraclass similarity - Objects are similar to objects
+in same cluster
+• Interclass dissimilarity - Objects are dissimilar to
+objects in other clusters
+B. Methods of Clustering
+• Partitioning methods
+• Hierarchical methods
+• Density-based methods
+• Grid-based methods
+• Model-based method
+
+Partitioning Methods:
+The partitioning methods generally result in a set of M clusters, each object belonging to one cluster. Each cluster may be represented by a centroid or a cluster representative;this is some sort of summary description of all the objects contained in a cluster. The precise form of this description will
+depend on the type of the object which is being clustered. In case where real-valued data is available, the arithmetic mean
+of the attribute vectors for all objects within a cluster provides an appropriate representative; alternative types of centroid may be required in other cases.
+ e.g., a cluster of documentscan be represented by a list of those keywords that occur in some minimum number of documents within a cluster. If the
+number of the clusters is large, the centroids can be further clustered to produces hierarchy within a dataset.
+
+Single Pass: A very simple partition method, the single pass method creates a partitioned dataset as follows:
+1. Make the first object the centroid for the first cluster.
+2. For the next object, calculate the similarity, S, with each existing cluster centroid, using some similarity coefficient.
+3. If the highest calculated S is greater than some specified threshold value, add the object to the corresponding cluster and re determine the centroid;
+otherwise, use the object to initiate a new cluster. If any objects remain to be clustered, return to step 2.
+
+Hierarchial Methods
+Connectivity based clustering, also known as hierarchical clustering, is based on the core idea of objects being more related to nearby objects than to objects farther away. As such, these algorithms connect "objects" to form "clusters" based on their distance. A cluster can be described largely by the maximum distance needed to connect parts of the cluster. At different distances, different clusters will form, which can berepresented using a dendrogram, which explains where the common name "hierarchical clustering" comes from: these algorithms do not provide a single partitioning of the data set,but instead provide an extensive hierarchy of clusters that merge with each other at certain distances.
+
+• Hierarchical Agglomerative Methods
+The hierarchical agglomerative clustering methods are most commonly used. The construction of an hierarchical agglomerative classification can be achieved by the following general algorithm.
+1. Find the 2 closest objects and merge them into a cluster
+2. Find and merge the next two closest points, where a point is either an individual object or a cluster of objects.If more than one cluster remains, return to step 2
+Two main approaches:
+Where the two approches will be done on it. where
+• Agglomerative approach
+• Divisive approach
+Individual methods are characterized by the definition used for identification of the closest pair of points, and by the means used to describe the new cluster when two clusters are merged.
+• Density Based Clustering:
+		In density-based clustering clusters are defined as areas of higher density than the remainder of the data set. Objects inthese sparse areas - that are required to separate clusters - are usually considered to be noise and border points.Density Reachability - A point "p" is said to be density
+reachable from a point "q" if point "p" is within e distance from point "q" and "q" has sufficient number of points in itsneighbors which are within distance e.
+Density Connectivity - 
+A point "p" and "q" are said to be density connected if there exist a point "r" which has sufficientnumber of points in its neighbors and both the points "p" and"q" are within the e distance. This is chaining process. So, if "q" is neighbor of "r", "r" is neighbor of "s", "s" is neighbor of"t" which in turn is neighbor of "p" implies that "q" is neighbor of "p".
+
+Algorithmic steps for DBSCAN Clustering
+Let X = {x1, x2, x3, ..., xn} be the set of data points. DBSCAN requires two parameters: e (eps) and the minimum number of points required to form a cluster(minPts).
+1) Start with an arbitrary starting point that has not beenvisited.
+2) Extract the neighborhood of this point using e (All points which are within the e distance are neighborhood).
+3) If there are sufficient neighborhood around this point then clustering process starts and point is marked as visited else this point is labeled as noise (Later this point can become the part of the cluster).
+4) If a point is found to be a part of the cluster then its e neighborhood is also the part of the cluster and the above procedure from step 2 is repeated for all e neighborhood points. This is repeated until all points in the cluster is determined.
+5) A new unvisited point is retrieved and processed,leading to the discovery of a further cluster or noise.
+6) This process continues until all points are marked as visited.
+
+• Advantages
+1) Does not require a-priori specification of number of clusters.
+2) Able to identify noise data while clustering.
+3) DBSCAN algorithm is able to find arbitrarily size and arbitrarily shaped clusters.
+• Disadvantages
+1) DBSCAN algorithm fails in case of varying density clusters
+2) Fails in case of neck type of dataset.
+3) Does not work well in case of high dimensional data.
+
+• K-means Algorithm
+1.K-Means algorithm is a type of partitioning method
+2.Group instances based on attributes into k groups
+3.High intra-cluster similarity; Low inter-cluster similarity
+4.Cluster similarity is measured in regards to the mean valueof objects in the cluster.
+
+• First, select K random instances from the data –initial cluster centers
+• Second, each instance is assigned to its closest (most similar) cluster center
+• Third, each cluster center is updated to the mean of its constituent instances
+• Repeat steps two and three till there is no further change in assignment of instances to clusters
+
+• K-Means Algorithm Properties
+• There are always K clusters.
+• There is always at least one item in each cluster.
+• The clusters are non-hierarchical and they do not overlap.
+• Every member of a cluster is closer to its cluster than any other cluster because closeness does not always involve the 'center' of clusters.
+• The K-Means Algorithm Process
+• The dataset is partitioned into K clusters and the data points are randomly assigned to the clusters resulting in clusters that have roughly the same number of data points.
+• For each data point:
+• Calculate the distance from the data point to each cluster.
+• If the data point is closest to its own cluster, leave it where it is. If the data point is not closest to its own cluster, move it into the closest cluster.
+• Repeat the above step until a complete pass through all the data points results in no data point moving from one cluster to another. At this point the clusters are stable and the clustering process ends.
+• The choice of initial partition can greatly affect the final clusters that result, in terms of inter-cluster and intracluster distances and cohesion.
+
+Example:
+Data for graph plot.
+Let us apply the k-Means clustering algorithm to the same example as in the previous page and obtain four clusters:
+Food item # Protein content, P Fat content, F
+Food item #1 1.1 60
+Food item #2 8.2 20
+Food item #3 4.2 35
+Food item #4 1.5 21
+Food item #5 7.6 15
+Food item #6 2.0 55
+Food item #7 3.9 39
+Let us plot these points so that we can have better understanding of the problem. Also, we can select the three points which are farthest apart.
+We see from the graph that the distance between the points
+1 and 2, 1 and 3, 1 and 4, 1 and 5, 2 and 3, 2 and 4, 3 and 4 is maximum.
+Thus, the four clusters chosen are:
+Cluster number Protein content, P Fat content, F
+C1 1.1 60
+C2 8.2 20
+C3 4.2 35
+C4 1.5 21
+Also, we observe that point 1 is close to point 6. So, both can be taken as one cluster. The resulting cluster is called C16 cluster. The value of P for C16 centroid is (1.1 + 2.0)/2 = 1.55 and F for C16 centroid is (60 + 55)/2 = 57.50.
+Upon closer observation, the point 2 can be merged with the C5 cluster. The resulting cluster is called C25 cluster. The values of P for C25 centroid is (8.2 + 7.6)/2 = 7.9 and F for C25 centroid is (20 + 15)/2 = 17.50
+The point 3 is close to point 7. They can be merged into C37 cluster. The values of P for C37 centroid is (4.2 + 3.9)/2 =4.05 and F for C37 centroid is (35 + 39)/2 = 37.
+The point 4 is not close to any point. So, it is assigned to cluster number 4 i.e., C4 with the value of P for C4 centroid as 1.5 and F for C4 centroid is 21.
+Finally, four clusters with three centroids have been obtained.Cluster number Protein content, P Fat content, F
+C16 1.55 57.50
+C25 7.9 17.5
+C37 4.05 37
+C4 1.5 21
+In the above example it was quite easy to estimate the distance between the points. In cases in which it is more  difficult to estimate the distance, one has to useeuclidean metric to measure the distance between two points to assign a point to a cluster.
+
+ APPLICATIONS OF CLUSTERING:
+Clustering is applied in various fields.Some of the applications are:
+1.Use of Clustering in Data Mining: Clustering is often one of the first steps in data mining analysis. It identifies groups of related records that can be used as a starting point for exploring further relationships. This technique supports the development of population segmentation models, such as
+demographic-based customer segmentation. Additional analyses using standard analytical and other data mining techniques can determine the characteristics of these segments with respect to some desired outcome. For example, the buying habits of multiple population segments might be
+compared to determine which segments to target for a new sales campaign.
+
+For example:	A company that sales a variety of products may need to know about the sale of all of their products in order to check that what product is giving extensive sale and which is lacking. This is done by data mining techniques. Butif the system clusters the products that are giving less sale then only the cluster of such products would have to be checked rather than comparing the sales value of all the products. This is actually to facilitate the mining process. A. Application of Clustering in Text Mining Text mining, also referred to as text data mining, roughlyequivalent to text analytics, refers to the process of deriving high-quality information from text. High-quality information is typically derived through the devising of patterns and trends through means such as statistical pattern learning. Text mining usually involves the process of structuring the input text (usually parsing, along with the addition of some derived linguistic features and the removal of others, and subsequentinsertion into a database), deriving patterns withinthe structured data, and finally evaluation and interpretation of the output. 'High quality' in text mining usually refers to some combination of relevance, novelty, and interestingness.
+Typical text mining tasks include text categorization, text clustering, concept/entity extraction, production of granular taxonomies, sentiment analysis, document summarization, and entity relation modeling.Text mining consists of extraction information fromhidden patterns in large text-data collections.
+
+Some other Applications of Clustering:
+
+Clustering is been used in the following fields:
+• Data Mining
+• Pattern recognition
+• Image analysis
+• Bioinformatics
+• Machine Learning
+• Voice minig
+• Image processing
+• Text mining
+• Web cluster engines
+• Whether report analysis
